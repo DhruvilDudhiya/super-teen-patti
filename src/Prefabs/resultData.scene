@@ -1,0 +1,94 @@
+{
+    "id": "6a1774ea-ef6b-40c2-8df5-d9ec966bc9ea",
+    "sceneType": "PREFAB",
+    "settings": {
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 1080,
+        "borderHeight": 1920
+    },
+    "displayList": [
+        {
+            "type": "Container",
+            "id": "092be9b9-a352-48ae-9100-5d5cdce47c63",
+            "label": "container_1",
+            "components": [],
+            "x": -383,
+            "y": -72,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "49b0e927-94c4-45be-84de-634e1e151bea",
+                    "label": "user_holder",
+                    "components": [],
+                    "texture": {
+                        "key": "user-holder"
+                    },
+                    "x": 382,
+                    "y": 84
+                },
+                {
+                    "type": "Text",
+                    "id": "0089c6eb-9838-4a23-8ef9-2085a54159c3",
+                    "label": "text_PlayerName",
+                    "scope": "CLASS",
+                    "components": [],
+                    "x": 218,
+                    "y": 68,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Dhruvil",
+                    "fontSize": "60px"
+                },
+                {
+                    "type": "Image",
+                    "id": "578a404f-a634-42c7-84d3-d831ec255e02",
+                    "label": "chip_holder",
+                    "components": [],
+                    "texture": {
+                        "key": "chip-holder"
+                    },
+                    "x": 607,
+                    "y": 80,
+                    "scaleX": 1.3,
+                    "scaleY": 1.3
+                },
+                {
+                    "type": "Text",
+                    "id": "a0824b9b-3ea6-4713-9f08-b294afdf7f96",
+                    "label": "text_chipesValue",
+                    "scope": "CLASS",
+                    "components": [],
+                    "x": 608,
+                    "y": 83,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "50,00",
+                    "fontSize": "70px",
+                    "color": "#000000ff"
+                },
+                {
+                    "type": "Text",
+                    "id": "b2a08497-c0d1-4c76-ac4d-c97cff2af475",
+                    "label": "text_rank",
+                    "scope": "CLASS",
+                    "components": [],
+                    "x": -64,
+                    "y": 67,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "1",
+                    "fontSize": "50px"
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    }
+}

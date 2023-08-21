@@ -1,0 +1,138 @@
+<html lang="en">
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+   <title>Teen-Patti</title>
+   <link rel="stylesheet" href="./teen_patti_files/bootstrap.min.css" />
+   <link rel="stylesheet" href="./assets/style/style.css">
+   <script src="./teen_patti_files/jquery.min.js"></script>
+   <script src="./teen_patti_files/bootstrap.min.js"></script>
+   <script src="./teen_patti_files/socket.io.js"></script>
+   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+</head>
+
+<body>
+   <div>
+      <div class="container" id="enterform">
+         <div class="logo-image">
+            <img src="assets/images/logo.png" alt=" Game Logo" width="500" height="300" />
+         </div>
+
+         <div class="login-text" id="login-text">Login</div>
+
+         <div class="login-form-group row" id="login-group">
+            <div class="col-md-4 col-sm-6 col-12">
+               <div class="email-input">
+                  <input type="email" id="sEmail" value="c@yudiz.in" placeholder="Enter Email" />
+               </div>
+               <div class="password-input">
+                  <input type="password" id="sPassword" value="Asdf@1234" placeholder="Enter Password" />
+               </div>
+               <button type="submit" class="btn-login" onclick="getAuthorizationToken()" autofocus>
+                  Login
+               </button>
+            </div>
+         </div>
+
+         <div class="game-type-group row">
+            <div class="col-md-4 col-sm-6 col-12">
+               <div class="gameData" style="display: none;" id="gameData">
+                  <button id="TwoPlayer" onclick="joinBoard('TwoPlayer')"></button>
+                  <button id="ThreePlayer" onclick="joinBoard('ThreePlayer')"></button>
+                  <button id="FourPlayer" onclick="joinBoard('FourPlayer')"></button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <script>
+      //Change the Game Port According to your Game Port Number
+      let gamePort = 3737;
+      const sRoot = "https://teenpatti-backend.lc.webdevprojects.cloud";
+      // const sRootl = "https://ad8c-103-156-142-125.ngrok.io";
+
+      const sRootUrl = sRoot + "/api/v1";
+      let sAuthorization = "";
+      let iProtoId = "";
+
+      function getAuthorizationToken() {
+         var settings = {
+            url: sRootUrl + "/auth/login/simple",
+            method: "POST",
+            timeout: 0,
+            headers: {
+               "Content-Type": "application/json",
+            },
+            data: JSON.stringify({
+               sEmail: $("#sEmail").val(),
+               sPassword: $("#sPassword").val(),
+            }),
+         };
+
+         let loginObj = $.ajax(settings).done(function (response) {
+            sAuthorization = loginObj.getResponseHeader("authorization");
+            getTableList();
+         });
+      }
+
+      let nMaxPlayers = 0;
+      function getTableList() {
+
+         $('#login-text').text('Select Game Type')
+         $('#login-group').css("display", "none")
+         var settings = {
+            url: sRootUrl + "/teenpatti/board/list/cash",
+            method: "GET",
+            timeout: 0,
+            headers: {
+               authorization: sAuthorization,
+            },
+         };
+
+         $.ajax(settings).done(function (response) {
+            $("#gameData").removeAttr("style");
+            $("#joinTable").removeAttr("style");
+            console.log('response', response);
+
+            $('#TwoPlayer').attr('value',response.data[2][0].iProtoId);
+            $('#ThreePlayer').attr('value',response.data[3][0].iProtoId);
+            $('#FourPlayer').attr('value',response.data[4][0].iProtoId);
+
+         });
+      }
+
+      function joinBoard(btnId) {
+         var settings = {
+            url: sRootUrl + "/teenpatti/board/join",
+            method: "POST",
+            timeout: 0,
+            headers: {
+               authorization: sAuthorization,
+               "Content-Type": "application/json",
+            },
+            data: JSON.stringify({
+               iProtoId: $(`#${btnId}`).val(),
+            }),
+
+         };
+         console.log(btnId,$(`#${btnId}`),$(`#${btnId}`).val());
+
+         $.ajax(settings).done(function (response) {
+            const gameUrl = "http://127.0.0.1:" + gamePort + "/editor/external/?";
+            // const gameUrl = "https://demos.yudiz.com/html5/super-teen-patti/?";
+            var passString = "iBoardId=" + response.data.iBoardId + "&";
+            passString = passString + "sAuthToken=" + sAuthorization + "&";
+            passString = passString + "sRootUrl=" + sRoot + "&";
+            passString = passString + "nChips=" + response.data.nChips;
+            window.open(gameUrl + passString, "", "width = 580, height = 1080");
+         });
+      }
+   </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+{
+    "id": "d3e4fc2b-d5dc-4bea-8dc3-9fbe5d303e1c",
+    "sceneType": "PREFAB",
+    "settings": {
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 1920,
+        "borderHeight": 1080
+    },
+    "displayList": [
+        {
+            "type": "Container",
+            "id": "a350c94c-2b58-4ad5-a8d5-e8c9b1fbf3aa",
+            "label": "container_1",
+            "components": [],
+            "x": -10,
+            "y": -15,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "2be5c4e7-59f7-4c67-a059-07eda8e3962d",
+                    "label": "frontCard",
+                    "scope": "CLASS",
+                    "components": [],
+                    "texture": {
+                        "key": "frontCard"
+                    },
+                    "x": 13,
+                    "y": 17,
+                    "scaleX": 0.3,
+                    "scaleY": 0.3
+                },
+                {
+                    "type": "Image",
+                    "id": "955a5f9b-64be-4513-97d6-1e776f0acb84",
+                    "label": "cardIcon",
+                    "scope": "CLASS",
+                    "components": [],
+                    "texture": {
+                        "key": "Diamond"
+                    },
+                    "x": 11,
+                    "y": 16,
+                    "scaleX": 0.2,
+                    "scaleY": 0.2
+                },
+                {
+                    "type": "Text",
+                    "id": "b6d217c9-377f-4556-8662-f381f6d11694",
+                    "label": "cardNumber",
+                    "scope": "CLASS",
+                    "components": [],
+                    "x": -29,
+                    "y": -51,
+                    "scaleX": 0.7,
+                    "scaleY": 0.7,
+                    "text": "1",
+                    "fontSize": "36px",
+                    "color": "#a60606ff"
+                },
+                {
+                    "type": "Image",
+                    "id": "8d3ac3a0-456a-4d08-a81e-87209ec36f67",
+                    "label": "small_cardIcon",
+                    "scope": "CLASS",
+                    "components": [],
+                    "texture": {
+                        "key": "Diamond"
+                    },
+                    "x": -17,
+                    "y": -10,
+                    "scaleX": 0.1,
+                    "scaleY": 0.1
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    }
+}

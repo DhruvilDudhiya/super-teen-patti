@@ -1,0 +1,298 @@
+{
+    "section1": {
+        "files": [
+            {
+                "url": "assets/images/gamePlay/1.png",
+                "type": "image",
+                "key": "1"
+            },
+            {
+                "url": "assets/images/gamePlay/3.png",
+                "type": "image",
+                "key": "3"
+            },
+            {
+                "url": "assets/images/gamePlay/5.png",
+                "type": "image",
+                "key": "5"
+            },
+            {
+                "url": "assets/images/gamePlay/6.png",
+                "type": "image",
+                "key": "6"
+            },
+            {
+                "url": "assets/images/back.png",
+                "type": "image",
+                "key": "back"
+            },
+            {
+                "url": "assets/images/button/black-bar.png",
+                "type": "image",
+                "key": "black-bar"
+            },
+            {
+                "url": "assets/images/black-layer.png",
+                "type": "image",
+                "key": "black-layer"
+            },
+            {
+                "url": "assets/images/blind-bg.png",
+                "type": "image",
+                "key": "blind-bg"
+            },
+            {
+                "url": "assets/images/blue-btn.png",
+                "type": "image",
+                "key": "blue-btn"
+            },
+            {
+                "url": "assets/images/box.png",
+                "type": "image",
+                "key": "box"
+            },
+            {
+                "url": "assets/images/resultscreen/box.png",
+                "type": "image",
+                "key": "box_1"
+            },
+            {
+                "url": "assets/images/btn-off.png",
+                "type": "image",
+                "key": "btn-off"
+            },
+            {
+                "url": "assets/images/card-back.png",
+                "type": "image",
+                "key": "card-back"
+            },
+            {
+                "url": "src/scripts/CardManager.js",
+                "type": "script",
+                "key": "CardManager"
+            },
+            {
+                "url": "src/Prefabs/CardPrefab.js",
+                "type": "script",
+                "key": "CardPrefab"
+            },
+            {
+                "url": "assets/images/chip.png",
+                "type": "image",
+                "key": "chip"
+            },
+            {
+                "url": "assets/images/chip-bg.png",
+                "type": "image",
+                "key": "chip-bg"
+            },
+            {
+                "url": "assets/images/resultscreen/chip-holder.png",
+                "type": "image",
+                "key": "chip-holder"
+            },
+            {
+                "url": "assets/images/close-btn.png",
+                "type": "image",
+                "key": "close-btn"
+            },
+            {
+                "url": "assets/images/Club.png",
+                "type": "image",
+                "key": "Club"
+            },
+            {
+                "url": "assets/images/Diamond.png",
+                "type": "image",
+                "key": "Diamond"
+            },
+            {
+                "url": "src/scripts/EmitManager.js",
+                "type": "script",
+                "key": "EmitManager"
+            },
+            {
+                "url": "assets/images/exit-icon.png",
+                "type": "image",
+                "key": "exit-icon"
+            },
+            {
+                "url": "assets/images/frontCard.png",
+                "type": "image",
+                "key": "frontCard"
+            },
+            {
+                "url": "src/scripts/GameManager.js",
+                "type": "script",
+                "key": "GameManager"
+            },
+            {
+                "url": "assets/images/background/gameplay-logo.png",
+                "type": "image",
+                "key": "gameplay-logo"
+            },
+            {
+                "url": "assets/images/resultscreen/glow.png",
+                "type": "image",
+                "key": "glow"
+            },
+            {
+                "url": "assets/images/heart.png",
+                "type": "image",
+                "key": "heart"
+            },
+            {
+                "url": "assets/images/info-icon.png",
+                "type": "image",
+                "key": "info-icon"
+            },
+            {
+                "url": "src/scripts/InputManager.js",
+                "type": "script",
+                "key": "InputManager"
+            },
+            {
+                "url": "assets/images/resultscreen/medal-1.png",
+                "type": "image",
+                "key": "medal-1"
+            },
+            {
+                "url": "assets/images/resultscreen/medal-2.png",
+                "type": "image",
+                "key": "medal-2"
+            },
+            {
+                "url": "assets/images/resultscreen/medal-3.png",
+                "type": "image",
+                "key": "medal-3"
+            },
+            {
+                "url": "assets/images/music-icon.png",
+                "type": "image",
+                "key": "music-icon"
+            },
+            {
+                "url": "assets/images/nav-btn.png",
+                "type": "image",
+                "key": "nav-btn"
+            },
+            {
+                "url": "assets/images/off-btn.png",
+                "type": "image",
+                "key": "off-btn"
+            },
+            {
+                "url": "assets/images/on-btn.png",
+                "type": "image",
+                "key": "on-btn"
+            },
+            {
+                "url": "assets/images/on-off-bg.png",
+                "type": "image",
+                "key": "on-off-bg"
+            },
+            {
+                "url": "src/scripts/PlayerManager.js",
+                "type": "script",
+                "key": "PlayerManager"
+            },
+            {
+                "url": "src/Prefabs/PlayerProfile.js",
+                "type": "script",
+                "key": "PlayerProfile"
+            },
+            {
+                "url": "assets/images/profileFrame.png",
+                "type": "image",
+                "key": "profileFrame"
+            },
+            {
+                "url": "assets/images/profilePlayer.png",
+                "type": "image",
+                "key": "profilePlayer"
+            },
+            {
+                "url": "assets/images/red-btn.png",
+                "type": "image",
+                "key": "red-btn"
+            },
+            {
+                "url": "src/Prefabs/resultData.js",
+                "type": "script",
+                "key": "resultData"
+            },
+            {
+                "url": "assets/images/see-btn.png",
+                "type": "image",
+                "key": "see-btn"
+            },
+            {
+                "url": "assets/images/seen-bg.png",
+                "type": "image",
+                "key": "seen-bg"
+            },
+            {
+                "url": "src/scripts/SocketManager.js",
+                "type": "script",
+                "key": "SocketManager"
+            },
+            {
+                "url": "src/scripts/SoundManager.js",
+                "type": "script",
+                "key": "SoundManager"
+            },
+            {
+                "url": "assets/images/spades.png",
+                "type": "image",
+                "key": "spades"
+            },
+            {
+                "url": "assets/images/table.png",
+                "type": "image",
+                "key": "table_1"
+            },
+            {
+                "url": "assets/images/tablebg.png",
+                "type": "image",
+                "key": "tablebg_1"
+            },
+            {
+                "url": "assets/images/gamePlay/timer.png",
+                "type": "image",
+                "key": "timer"
+            },
+            {
+                "url": "assets/images/resultscreen/trophy.png",
+                "type": "image",
+                "key": "trophy"
+            },
+            {
+                "url": "src/scripts/TweenManager.js",
+                "type": "script",
+                "key": "TweenManager"
+            },
+            {
+                "url": "assets/images/resultscreen/user-holder.png",
+                "type": "image",
+                "key": "user-holder"
+            },
+            {
+                "url": "assets/images/userpng@2x.png",
+                "type": "image",
+                "key": "userpng@2x"
+            },
+            {
+                "url": "assets/images/wait-box.png",
+                "type": "image",
+                "key": "wait-box"
+            }
+        ]
+    },
+    "meta": {
+        "app": "Phaser Editor 2D - Asset Pack Editor",
+        "contentType": "phasereditor2d.pack.core.AssetContentType",
+        "url": "https://phasereditor2d.com",
+        "version": 2,
+        "showAllFilesInBlocks": false
+    }
+}

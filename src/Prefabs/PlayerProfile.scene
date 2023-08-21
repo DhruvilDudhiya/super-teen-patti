@@ -1,0 +1,149 @@
+{
+    "id": "6a103362-1347-4be4-92f5-cb7e356f56a6",
+    "sceneType": "PREFAB",
+    "settings": {
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 1920,
+        "borderHeight": 1080
+    },
+    "displayList": [
+        {
+            "type": "Container",
+            "id": "9e514d63-7243-48e2-9117-c100ffe8860c",
+            "label": "container_1",
+            "components": [],
+            "list": [
+                {
+                    "type": "Container",
+                    "id": "6a11f04c-d98b-48b7-bec2-7328cec930fb",
+                    "label": "container_PlayerProfile",
+                    "scope": "CLASS",
+                    "components": [],
+                    "list": [
+                        {
+                            "type": "Image",
+                            "id": "2f5c7fd7-e884-414d-b7b9-e8003c535c2c",
+                            "label": "profilepic",
+                            "scope": "CLASS",
+                            "components": [],
+                            "texture": {
+                                "key": "5"
+                            },
+                            "x": -5,
+                            "y": -4,
+                            "scaleX": 0.5,
+                            "scaleY": 0.5
+                        },
+                        {
+                            "type": "Image",
+                            "id": "141c8179-6d8a-4210-bc5b-18e6d1733301",
+                            "label": "blind_bg",
+                            "scope": "CLASS",
+                            "components": [],
+                            "texture": {
+                                "key": "blind-bg"
+                            },
+                            "x": -5,
+                            "y": 39,
+                            "scaleX": 0.9
+                        },
+                        {
+                            "type": "Image",
+                            "id": "2121dd20-1fee-4a15-b2f9-b8e9234e8f34",
+                            "label": "profile_frame",
+                            "components": [],
+                            "texture": {
+                                "key": "profilePlayer"
+                            },
+                            "scaleX": 0.69,
+                            "scaleY": 0.69
+                        },
+                        {
+                            "type": "Image",
+                            "id": "ca7c9a85-dd51-40fe-937b-a9e0eaf97c4b",
+                            "label": "ring",
+                            "scope": "CLASS",
+                            "components": [],
+                            "texture": {
+                                "key": "timer"
+                            },
+                            "x": -5,
+                            "y": -4,
+                            "visible": false,
+                            "tintTopLeft": "#14e703",
+                            "tintTopRight": "#14e703",
+                            "tintBottomLeft": "#14e703",
+                            "tintBottomRight": "#14e703",
+                            "tintFill": true
+                        },
+                        {
+                            "type": "Image",
+                            "id": "fb7a766b-3004-412f-9ecf-e0626cd598c0",
+                            "label": "profileFrame",
+                            "components": [],
+                            "texture": {
+                                "key": "profileFrame"
+                            },
+                            "x": -6,
+                            "y": 110,
+                            "scaleX": 0.7,
+                            "scaleY": 0.7
+                        },
+                        {
+                            "type": "Text",
+                            "id": "b61ab5e0-a675-420e-8eb9-e3481002d788",
+                            "label": "text_playerName",
+                            "scope": "CLASS",
+                            "components": [],
+                            "y": 95,
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "Player!",
+                            "fontFamily": "BIWOLSTBI",
+                            "fontSize": "25px",
+                            "color": "#d3a17f"
+                        },
+                        {
+                            "type": "Text",
+                            "id": "2dc832a8-1e3b-419d-a363-2c29942d3f2f",
+                            "label": "text_playerChipes",
+                            "scope": "CLASS",
+                            "components": [],
+                            "y": 127,
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "25000",
+                            "fontFamily": "BIWOLSTBI",
+                            "fontSize": "25px",
+                            "color": "#d3a17f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Text",
+                    "id": "3f3e27fc-f742-4067-9fb6-3b17b3765728",
+                    "label": "card_status",
+                    "scope": "CLASS",
+                    "components": [],
+                    "x": -4,
+                    "y": 34,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Blind",
+                    "fontFamily": "BIWOLSTBI",
+                    "fontSize": "25px",
+                    "fontStyle": "bold"
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    }
+}
