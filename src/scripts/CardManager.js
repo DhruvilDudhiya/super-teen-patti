@@ -3,14 +3,103 @@ class CardManager {
         this.oScene = oScene;
     }
     setHandCardData = (card) => {
-         this.cardData = card;
-         this.oScene.container_playerHand.removeAll(true);
+        this.cardData = card;
+        this.oScene.container_playerHand.removeAll(true);
         for (let i = 0; i < card.length; i++) {
-            this.tempCard1 = this.oScene.add.existing(new CardPrefab(this.oScene, (this.oScene.container_playerHand.getAll().length * this.oScene.oGameManager.cardGap + 150), 1600)).setScale(0.8).setAngle(i * 20);
+            this.tempCard1 = this.oScene.add.existing(new CardPrefab(this.oScene, (this.oScene.container_playerHand.getAll().length * this.oScene.oGameManager.cardGap + 180), 1660)).setScale(0.8).setAngle((i == 0) ? -10 : ((i == 1) ? 0 : 10));
             this.tempCard1.updateCardUi(card[i].suit, card[i].rank, card[i].value, card[i]._id, card[i].nGroupId);
             this.oScene.container_playerHand.add(this.tempCard1);
         }
         this.oScene.container_playerHand.x = (1080 - ((this.oScene.container_playerHand.getAll().length - 1) * this.oScene.oGameManager.cardGap)) / 2;
+    }
+
+    resultHandCard = (data) => {
+        this.oScene.container_playerHand.removeAll(true);
+        if (data.length == 2) {
+            for (let i = 0; i < data.length; i++) {
+                if (data[i].iUserId == this.oScene.oPlayerManager.player1.name) {
+                    if(this.oScene.oPlayerManager.player1.back_cardContainer.visible == true){
+                        this.oScene.oPlayerManager.player1.back_cardContainer.visible = false;
+                    }
+                    this.PlayerResultData(data[i].aHand, this.oScene.oPlayerManager.player1.x, this.oScene.oPlayerManager.player1.y);
+                } else {
+                    if(data[i].eState != "left"){
+                        if(this.oScene.oPlayerManager.player2.back_cardContainer.visible == true){
+                            this.oScene.oPlayerManager.player2.back_cardContainer.visible = false;
+                        }
+                        this.PlayerResultData(data[i].aHand, this.oScene.oPlayerManager.player2.x, this.oScene.oPlayerManager.player2.y);
+                    }
+                }
+            }
+        } else if (data.length == 3) {
+            for (let i = 0; i < data.length; i++) {
+                if (data[i].iUserId != this.oScene.oPlayerManager.player1.name) {
+                    this.playerId = data[i].iUserId
+                    switch (this.playerId) {
+                        case this.oScene.oPlayerManager.player2.name:
+                            if(this.oScene.oPlayerManager.player2.back_cardContainer.visible == true){
+                                this.oScene.oPlayerManager.player2.back_cardContainer.visible = false;
+                            }
+                            this.PlayerResultData(data[i].aHand, this.oScene.oPlayerManager.player2.x, this.oScene.oPlayerManager.player2.y);
+                            break;
+                        case this.oScene.oPlayerManager.player3.name:
+                            if(this.oScene.oPlayerManager.player3.back_cardContainer.visible == true){
+                                this.oScene.oPlayerManager.player3.back_cardContainer.visible = false;
+                            }
+                            this.PlayerResultData(data[i].aHand, this.oScene.oPlayerManager.player3.x - 320 , this.oScene.oPlayerManager.player3.y);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                else{
+                    if(this.oScene.oPlayerManager.player1.back_cardContainer.visible == true){
+                        this.oScene.oPlayerManager.player1.back_cardContainer.visible = false;
+                    }
+                    this.PlayerResultData(data[i].aHand, this.oScene.oPlayerManager.player1.x, this.oScene.oPlayerManager.player1.y);
+                }
+            }
+        } else if(data.length == 4) {
+            for (let i = 0; i < data.length; i++) {
+                if (data[i].iUserId != this.oScene.oPlayerManager.player1.name) {
+                    this.playerId = data[i].iUserId
+                    switch (this.playerId) {
+                        case this.oScene.oPlayerManager.player2.name:
+                            if(this.oScene.oPlayerManager.player2.back_cardContainer.visible == true){
+                                this.oScene.oPlayerManager.player2.back_cardContainer.visible = false;
+                            }
+                            this.PlayerResultData(data[i].aHand, this.oScene.oPlayerManager.player2.x, this.oScene.oPlayerManager.player2.y);
+                            break;
+                        case this.oScene.oPlayerManager.player3.name:
+                            if(this.oScene.oPlayerManager.player3.back_cardContainer.visible == true){
+                                this.oScene.oPlayerManager.player3.back_cardContainer.visible = false;
+                            }
+                            this.PlayerResultData(data[i].aHand, this.oScene.oPlayerManager.player3.x - 320 , this.oScene.oPlayerManager.player3.y);
+                            break;
+                        case this.oScene.oPlayerManager.player4.name:
+                            if(this.oScene.oPlayerManager.player3.back_cardContainer.visible == true){
+                                this.oScene.oPlayerManager.player3.back_cardContainer.visible = false;
+                            }
+                            this.PlayerResultData(data[i].aHand, this.oScene.oPlayerManager.player4.x - 300 , this.oScene.oPlayerManager.player4.y);    
+                        default:
+                            break;
+                    }
+                }
+                else{
+                    if(this.oScene.oPlayerManager.player4.back_cardContainer.visible == true){
+                        this.oScene.oPlayerManager.player4.back_cardContainer.visible = false;
+                    }
+                    this.PlayerResultData(data[i].aHand, this.oScene.oPlayerManager.player1.x, this.oScene.oPlayerManager.player1.y);
+                }
+            } 
+        }
+    }
+    PlayerResultData = (cardData, playerX, playerY) => {
+        for (let i = 0; i < cardData.length; i++) {
+            this.tempCard1 = this.oScene.add.existing(new CardPrefab(this.oScene, playerX + 140 + (i * 25), playerY + 90)).setScale(0.8).setAngle((i == 0) ? -10 : ((i == 1) ? 0 : 10));
+            this.tempCard1.updateCardUi(cardData[i].suit, cardData[i].rank, cardData[i].value, cardData[i]._id, cardData[i].nGroupId);
+            this.oScene.container_resultHandCard.add(this.tempCard1);
+        }
     }
 
     setRules() {
@@ -35,48 +124,25 @@ class CardManager {
         this.players = this.oScene.oGameManager.nMaxPlayers;
         this.totalCards = this.players * 3;
         this.angle = this.players * 2 + 1;
-        console.log("blind", this.totalCards)
 
         for (var j = 0; j < this.totalCards; j++) {
-
             switch (j % this.players) {
-
                 case 1:
-                    this.oScene.add.image(this.oScene.oPlayerManager.player2.x - 135 + j * 5, this.oScene.oPlayerManager.player2.y + 67, "card-back").setAngle((j - this.angle) * 7).setScale(0.8).setOrigin(0.5, 1);
+                    let back_img = this.oScene.add.image(this.oScene.oPlayerManager.player2.x - 135 + j * 5, this.oScene.oPlayerManager.player2.y + 67, "card-back").setAngle((j - this.angle) * 7).setScale(0.8).setOrigin(0.5, 1);
+                    this.oScene.container_backCards.add(back_img);
                     break;
                 case 2:
-                    this.oScene.add.image(this.oScene.oPlayerManager.player1.x + 95 + j  *5, this.oScene.oPlayerManager.player1.y + 67, "card-back").setAngle((j - 2) * 7).setScale(0.8).setOrigin(0.5, 1);
+                    let back_img1 = this.oScene.add.image(this.oScene.oPlayerManager.player1.x + 95 + j * 5, this.oScene.oPlayerManager.player1.y + 67, "card-back").setAngle((j - 2) * 7).setScale(0.8).setOrigin(0.5, 1);
+                    this.oScene.container_backCards.add(back_img1);
                     break;
                 case 3:
-                    this.oScene.add.image(this.oScene.oPlayerManager.player1.x + 95 + j  *5, this.oScene.oPlayerManager.player1.y + 67, "card-back").setAngle((j - 3)  * 7).setScale(0.8).setOrigin(0.5, 1);
+                    let back_img2 = this.oScene.add.image(this.oScene.oPlayerManager.player1.x + 95 + j * 5, this.oScene.oPlayerManager.player1.y + 67, "card-back").setAngle((j - 3) * 7).setScale(0.8).setOrigin(0.5, 1);
+                    this.oScene.container_backCards.add(back_img2)
                     break;
             }
         }
     }
 
 
-    setBlindCards() {
-        switch (this.oScene.oGameManager.nMaxPlayers) {
-            case 2:
-                this.blindCardsData(6, 2);
-                break;
-            case 3:
-                this.blindCardsData(9, 3);
-                break;
-            case 2:
-                this.blindCardsData(12, 4);
-                break;
-        }
-    }
-
-    blindCardsData(nTotalCards, nPlayers) {
-
-        for (var j = 0; j < nTotalCards; j++) {
-
-            if (j % nPlayers == 0) {
-                this.oScene.container_backCards.add(this.oScene.add.image(this.oScene.oPlayerManager.player1.x + 100 + j * 5, this.oScene.oPlayerManager.player1.y + 72, "card-back").setAngle(j * 7).setScale(0.8).setOrigin(0.5, 1));
-            }
-        }
-    }
 
 }

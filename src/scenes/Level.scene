@@ -59,11 +59,13 @@
                     "components": [],
                     "x": 460,
                     "y": 661,
+                    "visible": false,
                     "list": [
                         {
                             "type": "Image",
                             "id": "2af3ea5a-a5fa-4d32-b902-e91013627609",
                             "label": "chip_bg",
+                            "scope": "CLASS",
                             "components": [],
                             "texture": {
                                 "key": "chip-bg"
@@ -77,6 +79,7 @@
                             "type": "Image",
                             "id": "e8d10976-d9fc-4bef-8834-a4b9ea4f2b77",
                             "label": "chip",
+                            "scope": "CLASS",
                             "components": [],
                             "texture": {
                                 "key": "chip"
@@ -136,16 +139,20 @@
                     },
                     "x": 537,
                     "y": 858
+                },
+                {
+                    "type": "Image",
+                    "id": "10f44f1f-b369-44c8-a338-93e98fd86532",
+                    "label": "lady",
+                    "scope": "CLASS",
+                    "components": [],
+                    "texture": {
+                        "key": "lady"
+                    },
+                    "x": 542,
+                    "y": 181
                 }
             ]
-        },
-        {
-            "type": "Container",
-            "id": "be19b8be-faf8-4725-a39b-13ee9f03f9d8",
-            "label": "container_players",
-            "scope": "CLASS",
-            "components": [],
-            "list": []
         },
         {
             "type": "Container",
@@ -153,8 +160,33 @@
             "label": "container_playerHand",
             "scope": "CLASS",
             "components": [],
-            "y": 3,
+            "y": 2,
             "visible": false,
+            "list": []
+        },
+        {
+            "type": "Container",
+            "id": "898e9b9b-dff4-44a9-a09e-195bf89befd8",
+            "label": "container_resultHandCard",
+            "scope": "CLASS",
+            "components": [],
+            "list": []
+        },
+        {
+            "type": "Container",
+            "id": "be19b8be-faf8-4725-a39b-13ee9f03f9d8",
+            "label": "container_players",
+            "scope": "CLASS",
+            "components": [],
+            "y": 1,
+            "list": []
+        },
+        {
+            "type": "Container",
+            "id": "b6c8c76e-28bd-48a9-b382-2c1a3edd1f7b",
+            "label": "container_tempCoin",
+            "scope": "CLASS",
+            "components": [],
             "list": []
         },
         {
@@ -168,9 +200,10 @@
                     "type": "Container",
                     "id": "5793c7cb-264e-4f0f-b532-7e3685518962",
                     "label": "container_fold",
+                    "scope": "CLASS",
                     "components": [],
-                    "x": 114,
-                    "y": 1821,
+                    "x": 168.19956957013034,
+                    "y": 1837.9373654906658,
                     "list": [
                         {
                             "type": "Image",
@@ -181,8 +214,8 @@
                             "texture": {
                                 "key": "red-btn"
                             },
-                            "x": 58,
-                            "y": 22,
+                            "x": 3.800430429869664,
+                            "y": 5.0626345093342024,
                             "scaleX": 0.8,
                             "scaleY": 0.8
                         },
@@ -192,8 +225,8 @@
                             "label": "fold_txt",
                             "scope": "CLASS",
                             "components": [],
-                            "x": 3,
-                            "y": -1,
+                            "x": -51.199569570130336,
+                            "y": -17.937365490665798,
                             "text": "FOLD",
                             "fontFamily": "BIWOLSTBI",
                             "fontSize": "40px"
@@ -204,9 +237,10 @@
                     "type": "Container",
                     "id": "ced170fb-f4e1-45ce-a71f-cf8e00b50574",
                     "label": "container_Show",
+                    "scope": "CLASS",
                     "components": [],
-                    "x": 820,
-                    "y": 1822,
+                    "x": 916.5429832967947,
+                    "y": 1838.9373654906658,
                     "list": [
                         {
                             "type": "Image",
@@ -217,8 +251,8 @@
                             "texture": {
                                 "key": "red-btn"
                             },
-                            "x": 97,
-                            "y": 19,
+                            "x": 0.4570167032053405,
+                            "y": 2.0626345093342024,
                             "scaleX": 0.8,
                             "scaleY": 0.8
                         },
@@ -228,8 +262,8 @@
                             "label": "show_txt",
                             "scope": "CLASS",
                             "components": [],
-                            "x": 94,
-                            "y": 22,
+                            "x": -2.5429832967946595,
+                            "y": 5.0626345093342024,
                             "originX": 0.5,
                             "originY": 0.5,
                             "text": "SHOW",
@@ -245,11 +279,10 @@
                             "texture": {
                                 "key": "btn-off"
                             },
-                            "x": 94,
-                            "y": 19,
+                            "x": -2.5429832967946595,
+                            "y": 2.0626345093342024,
                             "scaleX": 0.8,
-                            "scaleY": 0.8,
-                            "visible": false
+                            "scaleY": 0.8
                         }
                     ]
                 },
@@ -257,9 +290,10 @@
                     "type": "Container",
                     "id": "dc708d24-a43a-4f3b-904b-102ec7a87df5",
                     "label": "container_raise",
+                    "scope": "CLASS",
                     "components": [],
-                    "x": 625,
-                    "y": 1801,
+                    "x": 663.9559406285312,
+                    "y": 1838.2622040794647,
                     "list": [
                         {
                             "type": "Image",
@@ -270,8 +304,8 @@
                             "texture": {
                                 "key": "blue-btn"
                             },
-                            "x": 38,
-                            "y": 40,
+                            "x": -0.9559406285311525,
+                            "y": 2.737795920535291,
                             "scaleX": 0.8,
                             "scaleY": 0.8
                         },
@@ -281,8 +315,8 @@
                             "label": "raise_txt",
                             "scope": "CLASS",
                             "components": [],
-                            "x": 36,
-                            "y": 20,
+                            "x": -2.9559406285311525,
+                            "y": -17.26220407946471,
                             "originX": 0.5,
                             "originY": 0.5,
                             "text": "2X",
@@ -295,8 +329,8 @@
                             "label": "raise_value",
                             "scope": "CLASS",
                             "components": [],
-                            "x": 34,
-                            "y": 64,
+                            "x": -4.9559406285311525,
+                            "y": 26.73779592053529,
                             "originX": 0.5,
                             "originY": 0.5,
                             "text": "0",
@@ -312,8 +346,8 @@
                             "texture": {
                                 "key": "btn-off"
                             },
-                            "x": 38,
-                            "y": 42,
+                            "x": -0.9559406285311525,
+                            "y": 4.737795920535291,
                             "scaleX": 0.8,
                             "scaleY": 0.8,
                             "visible": false
@@ -326,8 +360,8 @@
                     "label": "container_blind",
                     "scope": "CLASS",
                     "components": [],
-                    "x": 354,
-                    "y": 1801,
+                    "x": 413.28077921733006,
+                    "y": 1836.568467530398,
                     "list": [
                         {
                             "type": "Image",
@@ -338,8 +372,8 @@
                             "texture": {
                                 "key": "red-btn"
                             },
-                            "x": 61,
-                            "y": 39,
+                            "x": 1.719220782669936,
+                            "y": 3.4315324696019616,
                             "scaleX": 0.8,
                             "scaleY": 0.8
                         },
@@ -349,8 +383,8 @@
                             "label": "blind_txt",
                             "scope": "CLASS",
                             "components": [],
-                            "x": 58,
-                            "y": 23,
+                            "x": -1.280779217330064,
+                            "y": -12.568467530398038,
                             "originX": 0.5,
                             "originY": 0.5,
                             "text": "BLIND",
@@ -363,8 +397,8 @@
                             "label": "blind_value",
                             "scope": "CLASS",
                             "components": [],
-                            "x": 57,
-                            "y": 63,
+                            "x": -2.280779217330064,
+                            "y": 27.43153246960196,
                             "originX": 0.5,
                             "originY": 0.5,
                             "text": "0",
@@ -378,8 +412,8 @@
                     "label": "container_call",
                     "scope": "CLASS",
                     "components": [],
-                    "x": 354,
-                    "y": 1801,
+                    "x": 409.5870426682635,
+                    "y": 1836.8747309813314,
                     "visible": false,
                     "list": [
                         {
@@ -391,8 +425,8 @@
                             "texture": {
                                 "key": "red-btn"
                             },
-                            "x": 61,
-                            "y": 39,
+                            "x": 3.412957331736493,
+                            "y": 5.125269018668632,
                             "scaleX": 0.8,
                             "scaleY": 0.8
                         },
@@ -402,8 +436,8 @@
                             "label": "call_txt",
                             "scope": "CLASS",
                             "components": [],
-                            "x": 58,
-                            "y": 23,
+                            "x": 0.41295733173649296,
+                            "y": -10.874730981331368,
                             "originX": 0.5,
                             "originY": 0.5,
                             "text": "CALL",
@@ -416,13 +450,68 @@
                             "label": "call_value",
                             "scope": "CLASS",
                             "components": [],
-                            "x": 57,
-                            "y": 63,
+                            "x": -0.587042668263507,
+                            "y": 29.125269018668632,
                             "originX": 0.5,
                             "originY": 0.5,
                             "text": "100",
                             "fontFamily": "BIWOLSTBI",
                             "fontSize": "40px"
+                        }
+                    ]
+                },
+                {
+                    "type": "Container",
+                    "id": "848925d3-5632-4932-bc9a-0933d71379d1",
+                    "label": "container_sideShow",
+                    "scope": "CLASS",
+                    "components": [],
+                    "x": 923,
+                    "y": 1665,
+                    "visible": false,
+                    "list": [
+                        {
+                            "type": "Image",
+                            "id": "150a157f-f8ac-41ca-ae3e-9b2cf1051386",
+                            "label": "side_show_btn",
+                            "scope": "CLASS",
+                            "components": [],
+                            "texture": {
+                                "key": "red-btn"
+                            },
+                            "x": 0.4570167032053405,
+                            "y": 2.0626345093342024,
+                            "scaleX": 0.8,
+                            "scaleY": 0.8
+                        },
+                        {
+                            "type": "Text",
+                            "id": "e79d2395-959e-420b-a523-1375480430f1",
+                            "label": "side_show_txt",
+                            "scope": "CLASS",
+                            "components": [],
+                            "x": -2.5429832967946595,
+                            "y": 5.0626345093342024,
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "SIDE \nSHOW",
+                            "align": "center",
+                            "fontFamily": "BIWOLSTBI",
+                            "fontSize": "35px"
+                        },
+                        {
+                            "type": "Image",
+                            "id": "97f6eee8-5507-4318-a219-b252e8ba3776",
+                            "label": "side_show_Disable",
+                            "scope": "CLASS",
+                            "components": [],
+                            "texture": {
+                                "key": "btn-off"
+                            },
+                            "x": -2.5429832967946595,
+                            "y": 2.0626345093342024,
+                            "scaleX": 0.8,
+                            "scaleY": 0.8
                         }
                     ]
                 }
@@ -466,15 +555,6 @@
         },
         {
             "type": "Container",
-            "id": "62116514-2bde-457d-97c4-48b39f8e6504",
-            "label": "container_backCards",
-            "scope": "CLASS",
-            "components": [],
-            "y": 1,
-            "list": []
-        },
-        {
-            "type": "Container",
             "id": "886f227d-e056-4e42-ac53-128a106c290a",
             "label": "container_menu",
             "scope": "CLASS",
@@ -482,6 +562,7 @@
             "x": 541.6150512695312,
             "y": 960.3103951187292,
             "scaleX": 0,
+            "scaleY": 0,
             "list": [
                 {
                     "type": "Image",
@@ -492,7 +573,9 @@
                         "key": "black-layer"
                     },
                     "x": 2,
-                    "y": -2
+                    "y": -2,
+                    "scaleX": 1.1,
+                    "scaleY": 1.1
                 },
                 {
                     "type": "Image",
@@ -514,8 +597,10 @@
                     "texture": {
                         "key": "close-btn"
                     },
-                    "x": 487.38495014364855,
-                    "y": -415.31037208572957
+                    "x": 467,
+                    "y": -415,
+                    "scaleX": 0.8,
+                    "scaleY": 0.8
                 },
                 {
                     "type": "Image",
@@ -590,8 +675,9 @@
                     "texture": {
                         "key": "on-off-bg"
                     },
-                    "x": 68,
-                    "y": 192
+                    "x": 76,
+                    "y": 203,
+                    "scaleY": 1.2
                 },
                 {
                     "type": "Image",
@@ -601,8 +687,8 @@
                     "texture": {
                         "key": "on-btn"
                     },
-                    "x": 119,
-                    "y": 191
+                    "x": 127,
+                    "y": 202
                 },
                 {
                     "type": "Text",
@@ -625,8 +711,8 @@
                     "label": "text_on",
                     "scope": "CLASS",
                     "components": [],
-                    "x": 50,
-                    "y": 191,
+                    "x": 64,
+                    "y": 204,
                     "originX": 0.5,
                     "originY": 0.5,
                     "text": "On",
@@ -641,6 +727,8 @@
             "label": "container_resultScreen",
             "scope": "CLASS",
             "components": [],
+            "x": -5,
+            "y": 9,
             "visible": false,
             "list": [
                 {
@@ -652,7 +740,9 @@
                         "key": "black-layer"
                     },
                     "x": 540,
-                    "y": 939
+                    "y": 939,
+                    "scaleX": 1.1,
+                    "scaleY": 1.1
                 },
                 {
                     "type": "Image",
@@ -732,7 +822,9 @@
                         "key": "black-layer"
                     },
                     "x": 547,
-                    "y": 968
+                    "y": 962,
+                    "scaleX": 1.1,
+                    "scaleY": 1.1
                 },
                 {
                     "type": "Image",
@@ -756,6 +848,176 @@
                     "originX": 0.5,
                     "originY": 0.5,
                     "text": "Game WILL START IN 6 SECONDS..\n",
+                    "fontSize": "35px"
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "2703ad95-f989-493f-abb6-e3872dcbed59",
+            "label": "container_kickOut",
+            "scope": "CLASS",
+            "components": [],
+            "x": 595.6658363492907,
+            "y": 818.1209377575311,
+            "scaleX": 0,
+            "scaleY": 0,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "cc077e19-bd2e-4575-a868-fec20a8f250c",
+                    "label": "black_layer_3",
+                    "scope": "CLASS",
+                    "components": [],
+                    "texture": {
+                        "key": "black-layer"
+                    },
+                    "x": -1.6658363492906574,
+                    "y": 45.879062242468876,
+                    "scaleX": 1.1,
+                    "scaleY": 1.1
+                },
+                {
+                    "type": "Image",
+                    "id": "810315be-b6c2-4569-98e3-80f5831c14fd",
+                    "label": "box_popup",
+                    "components": [],
+                    "texture": {
+                        "key": "wait-box"
+                    },
+                    "x": 4.334163650709343,
+                    "y": 21.879062242468876
+                },
+                {
+                    "type": "Text",
+                    "id": "f5ee13fd-459f-48fa-922d-dfc66091ff57",
+                    "label": "text_kickOut",
+                    "scope": "CLASS",
+                    "components": [],
+                    "x": 10.334163650709343,
+                    "y": 7.879062242468876,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "There are not enough players to start the game.\n",
+                    "paddingLeft": 5,
+                    "paddingTop": 5,
+                    "paddingRight": 5,
+                    "paddingBottom": 5,
+                    "lineSpacing": 20,
+                    "align": "center",
+                    "fontSize": "35px",
+                    "baselineX": 1.4,
+                    "maxLines": 2,
+                    "wordWrapWidth": 700
+                },
+                {
+                    "type": "Image",
+                    "id": "d123497d-9840-437f-b930-1a5f5cf0b135",
+                    "label": "ok_Btn",
+                    "scope": "CLASS",
+                    "components": [],
+                    "texture": {
+                        "key": "ok-Btn"
+                    },
+                    "x": -2,
+                    "y": 252,
+                    "scaleX": 2.5,
+                    "scaleY": 2.5
+                },
+                {
+                    "type": "Text",
+                    "id": "c2312999-23d3-48a8-90ed-9f891f39ef36",
+                    "label": "text_ok",
+                    "scope": "CLASS",
+                    "components": [],
+                    "x": -6,
+                    "y": 258,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "OK",
+                    "fontSize": "55px",
+                    "color": "#671e02"
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "1dc4fbd9-2816-4955-beaf-6e3ec7ef3536",
+            "label": "container_reqSideShow",
+            "scope": "CLASS",
+            "components": [],
+            "x": 371.5,
+            "y": -924.06005859375,
+            "visible": false,
+            "list": [
+                {
+                    "type": "Text",
+                    "id": "e349a77f-277f-4d48-ac04-bb6e71bbc91e",
+                    "label": "side_showReqTxt",
+                    "scope": "CLASS",
+                    "components": [],
+                    "x": 168.5,
+                    "y": 1884.06005859375,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "align": "center",
+                    "fontFamily": "BIWOLSTBI",
+                    "fontSize": "25px"
+                },
+                {
+                    "type": "Image",
+                    "id": "a8dbf085-7caa-42c4-b98e-ed9f364bd107",
+                    "label": "yesBtn_btn",
+                    "scope": "CLASS",
+                    "components": [],
+                    "texture": {
+                        "key": "red-btn"
+                    },
+                    "x": 50,
+                    "y": 1970,
+                    "scaleX": 0.5,
+                    "scaleY": 0.5
+                },
+                {
+                    "type": "Image",
+                    "id": "6b4a8b8c-ec13-4902-b470-1fc73a440b07",
+                    "label": "no_btn",
+                    "scope": "CLASS",
+                    "components": [],
+                    "texture": {
+                        "key": "blue-btn"
+                    },
+                    "x": 277,
+                    "y": 1970,
+                    "scaleX": 0.5,
+                    "scaleY": 0.5
+                },
+                {
+                    "type": "Text",
+                    "id": "4bfd933b-6bc8-40f3-8b61-fdbc35539e89",
+                    "label": "accept_text",
+                    "scope": "CLASS",
+                    "components": [],
+                    "x": 50,
+                    "y": 1968,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Accept",
+                    "fontFamily": "BIWOLSTBI",
+                    "fontSize": "35px"
+                },
+                {
+                    "type": "Text",
+                    "id": "369076a4-e14d-4c1b-ac5d-64c215f97654",
+                    "label": "reject_text",
+                    "scope": "CLASS",
+                    "components": [],
+                    "x": 275,
+                    "y": 1966,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Reject",
+                    "fontFamily": "BIWOLSTBI",
                     "fontSize": "35px"
                 }
             ]

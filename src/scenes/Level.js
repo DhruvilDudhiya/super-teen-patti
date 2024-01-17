@@ -35,6 +35,7 @@ class Level extends Phaser.Scene {
 
 		// container_playerPot
 		const container_playerPot = this.add.container(460, 661);
+		container_playerPot.visible = false;
 		container_background.add(container_playerPot);
 
 		// chip_bg
@@ -71,135 +72,168 @@ class Level extends Phaser.Scene {
 		const gameplay_logo = this.add.image(537, 858, "gameplay-logo");
 		container_background.add(gameplay_logo);
 
-		// container_players
-		const container_players = this.add.container(0, 0);
+		// lady
+		const lady = this.add.image(542, 181, "lady");
+		container_background.add(lady);
 
 		// container_playerHand
-		const container_playerHand = this.add.container(0, 3);
+		const container_playerHand = this.add.container(0, 2);
 		container_playerHand.visible = false;
+
+		// container_resultHandCard
+		const container_resultHandCard = this.add.container(0, 0);
+
+		// container_players
+		const container_players = this.add.container(0, 1);
+
+		// container_tempCoin
+		const container_tempCoin = this.add.container(0, 0);
 
 		// container_button
 		const container_button = this.add.container(0, 0);
 
 		// container_fold
-		const container_fold = this.add.container(114, 1821);
+		const container_fold = this.add.container(168.19956957013034, 1837.9373654906658);
 		container_button.add(container_fold);
 
 		// fold_btn
-		const fold_btn = this.add.image(58, 22, "red-btn");
+		const fold_btn = this.add.image(3.800430429869664, 5.0626345093342024, "red-btn");
 		fold_btn.scaleX = 0.8;
 		fold_btn.scaleY = 0.8;
 		container_fold.add(fold_btn);
 
 		// fold_txt
-		const fold_txt = this.add.text(3, -1, "", {});
+		const fold_txt = this.add.text(-51.199569570130336, -17.937365490665798, "", {});
 		fold_txt.text = "FOLD";
 		fold_txt.setStyle({ "fontFamily": "BIWOLSTBI", "fontSize": "40px" });
 		container_fold.add(fold_txt);
 
 		// container_Show
-		const container_Show = this.add.container(820, 1822);
+		const container_Show = this.add.container(916.5429832967947, 1838.9373654906658);
 		container_button.add(container_Show);
 
 		// show_btn
-		const show_btn = this.add.image(97, 19, "red-btn");
+		const show_btn = this.add.image(0.4570167032053405, 2.0626345093342024, "red-btn");
 		show_btn.scaleX = 0.8;
 		show_btn.scaleY = 0.8;
 		container_Show.add(show_btn);
 
 		// show_txt
-		const show_txt = this.add.text(94, 22, "", {});
+		const show_txt = this.add.text(-2.5429832967946595, 5.0626345093342024, "", {});
 		show_txt.setOrigin(0.5, 0.5);
 		show_txt.text = "SHOW";
 		show_txt.setStyle({ "fontFamily": "BIWOLSTBI", "fontSize": "40px" });
 		container_Show.add(show_txt);
 
 		// show_Disable
-		const show_Disable = this.add.image(94, 19, "btn-off");
+		const show_Disable = this.add.image(-2.5429832967946595, 2.0626345093342024, "btn-off");
 		show_Disable.scaleX = 0.8;
 		show_Disable.scaleY = 0.8;
-		show_Disable.visible = false;
 		container_Show.add(show_Disable);
 
 		// container_raise
-		const container_raise = this.add.container(625, 1801);
+		const container_raise = this.add.container(663.9559406285312, 1838.2622040794647);
 		container_button.add(container_raise);
 
 		// raise_btn
-		const raise_btn = this.add.image(38, 40, "blue-btn");
+		const raise_btn = this.add.image(-0.9559406285311525, 2.737795920535291, "blue-btn");
 		raise_btn.scaleX = 0.8;
 		raise_btn.scaleY = 0.8;
 		container_raise.add(raise_btn);
 
 		// raise_txt
-		const raise_txt = this.add.text(36, 20, "", {});
+		const raise_txt = this.add.text(-2.9559406285311525, -17.26220407946471, "", {});
 		raise_txt.setOrigin(0.5, 0.5);
 		raise_txt.text = "2X";
 		raise_txt.setStyle({ "fontFamily": "BIWOLSTBI", "fontSize": "40px" });
 		container_raise.add(raise_txt);
 
 		// raise_value
-		const raise_value = this.add.text(34, 64, "", {});
+		const raise_value = this.add.text(-4.9559406285311525, 26.73779592053529, "", {});
 		raise_value.setOrigin(0.5, 0.5);
 		raise_value.text = "0";
 		raise_value.setStyle({ "fontFamily": "BIWOLSTBI", "fontSize": "40px" });
 		container_raise.add(raise_value);
 
 		// raise_Disable
-		const raise_Disable = this.add.image(38, 42, "btn-off");
+		const raise_Disable = this.add.image(-0.9559406285311525, 4.737795920535291, "btn-off");
 		raise_Disable.scaleX = 0.8;
 		raise_Disable.scaleY = 0.8;
 		raise_Disable.visible = false;
 		container_raise.add(raise_Disable);
 
 		// container_blind
-		const container_blind = this.add.container(354, 1801);
+		const container_blind = this.add.container(413.28077921733006, 1836.568467530398);
 		container_button.add(container_blind);
 
 		// blind_btn
-		const blind_btn = this.add.image(61, 39, "red-btn");
+		const blind_btn = this.add.image(1.719220782669936, 3.4315324696019616, "red-btn");
 		blind_btn.scaleX = 0.8;
 		blind_btn.scaleY = 0.8;
 		container_blind.add(blind_btn);
 
 		// blind_txt
-		const blind_txt = this.add.text(58, 23, "", {});
+		const blind_txt = this.add.text(-1.280779217330064, -12.568467530398038, "", {});
 		blind_txt.setOrigin(0.5, 0.5);
 		blind_txt.text = "BLIND";
 		blind_txt.setStyle({ "fontFamily": "BIWOLSTBI", "fontSize": "40px" });
 		container_blind.add(blind_txt);
 
 		// blind_value
-		const blind_value = this.add.text(57, 63, "", {});
+		const blind_value = this.add.text(-2.280779217330064, 27.43153246960196, "", {});
 		blind_value.setOrigin(0.5, 0.5);
 		blind_value.text = "0";
 		blind_value.setStyle({ "fontSize": "40px" });
 		container_blind.add(blind_value);
 
 		// container_call
-		const container_call = this.add.container(354, 1801);
+		const container_call = this.add.container(409.5870426682635, 1836.8747309813314);
 		container_call.visible = false;
 		container_button.add(container_call);
 
 		// call_btn
-		const call_btn = this.add.image(61, 39, "red-btn");
+		const call_btn = this.add.image(3.412957331736493, 5.125269018668632, "red-btn");
 		call_btn.scaleX = 0.8;
 		call_btn.scaleY = 0.8;
 		container_call.add(call_btn);
 
 		// call_txt
-		const call_txt = this.add.text(58, 23, "", {});
+		const call_txt = this.add.text(0.41295733173649296, -10.874730981331368, "", {});
 		call_txt.setOrigin(0.5, 0.5);
 		call_txt.text = "CALL";
 		call_txt.setStyle({ "fontFamily": "BIWOLSTBI", "fontSize": "40px" });
 		container_call.add(call_txt);
 
 		// call_value
-		const call_value = this.add.text(57, 63, "", {});
+		const call_value = this.add.text(-0.587042668263507, 29.125269018668632, "", {});
 		call_value.setOrigin(0.5, 0.5);
 		call_value.text = "100";
 		call_value.setStyle({ "fontFamily": "BIWOLSTBI", "fontSize": "40px" });
 		container_call.add(call_value);
+
+		// container_sideShow
+		const container_sideShow = this.add.container(923, 1665);
+		container_sideShow.visible = false;
+		container_button.add(container_sideShow);
+
+		// side_show_btn
+		const side_show_btn = this.add.image(0.4570167032053405, 2.0626345093342024, "red-btn");
+		side_show_btn.scaleX = 0.8;
+		side_show_btn.scaleY = 0.8;
+		container_sideShow.add(side_show_btn);
+
+		// side_show_txt
+		const side_show_txt = this.add.text(-2.5429832967946595, 5.0626345093342024, "", {});
+		side_show_txt.setOrigin(0.5, 0.5);
+		side_show_txt.text = "SIDE \nSHOW";
+		side_show_txt.setStyle({ "align": "center", "fontFamily": "BIWOLSTBI", "fontSize": "35px" });
+		container_sideShow.add(side_show_txt);
+
+		// side_show_Disable
+		const side_show_Disable = this.add.image(-2.5429832967946595, 2.0626345093342024, "btn-off");
+		side_show_Disable.scaleX = 0.8;
+		side_show_Disable.scaleY = 0.8;
+		container_sideShow.add(side_show_Disable);
 
 		// container_see
 		const container_see = this.add.container(660, 1486);
@@ -215,15 +249,15 @@ class Level extends Phaser.Scene {
 		see_txt.setStyle({ "fontFamily": "iwolstyn", "fontSize": "25px" });
 		container_see.add(see_txt);
 
-		// container_backCards
-		const container_backCards = this.add.container(0, 1);
-
 		// container_menu
 		const container_menu = this.add.container(541.6150512695312, 960.3103951187292);
 		container_menu.scaleX = 0;
+		container_menu.scaleY = 0;
 
 		// black_layer
 		const black_layer = this.add.image(2, -2, "black-layer");
+		black_layer.scaleX = 1.1;
+		black_layer.scaleY = 1.1;
 		container_menu.add(black_layer);
 
 		// box
@@ -231,7 +265,9 @@ class Level extends Phaser.Scene {
 		container_menu.add(box);
 
 		// close_btn
-		const close_btn = this.add.image(487.38495014364855, -415.31037208572957, "close-btn");
+		const close_btn = this.add.image(467, -415, "close-btn");
+		close_btn.scaleX = 0.8;
+		close_btn.scaleY = 0.8;
 		container_menu.add(close_btn);
 
 		// exit_icon
@@ -261,11 +297,12 @@ class Level extends Phaser.Scene {
 		container_menu.add(text_gameInfo);
 
 		// on_off_bg
-		const on_off_bg = this.add.image(68, 192, "on-off-bg");
+		const on_off_bg = this.add.image(76, 203, "on-off-bg");
+		on_off_bg.scaleY = 1.2;
 		container_menu.add(on_off_bg);
 
 		// on_btn
-		const on_btn = this.add.image(119, 191, "on-btn");
+		const on_btn = this.add.image(127, 202, "on-btn");
 		container_menu.add(on_btn);
 
 		// text_menu
@@ -276,18 +313,20 @@ class Level extends Phaser.Scene {
 		container_menu.add(text_menu);
 
 		// text_on
-		const text_on = this.add.text(50, 191, "", {});
+		const text_on = this.add.text(64, 204, "", {});
 		text_on.setOrigin(0.5, 0.5);
 		text_on.text = "On";
 		text_on.setStyle({ "fontFamily": "BIWOLSTBI", "fontSize": "30px" });
 		container_menu.add(text_on);
 
 		// container_resultScreen
-		const container_resultScreen = this.add.container(0, 0);
+		const container_resultScreen = this.add.container(-5, 9);
 		container_resultScreen.visible = false;
 
 		// black_layer_1
 		const black_layer_1 = this.add.image(540, 939, "black-layer");
+		black_layer_1.scaleX = 1.1;
+		black_layer_1.scaleY = 1.1;
 		container_resultScreen.add(black_layer_1);
 
 		// glow
@@ -318,7 +357,9 @@ class Level extends Phaser.Scene {
 		container_waitingScene.visible = false;
 
 		// black_layer_2
-		const black_layer_2 = this.add.image(547, 968, "black-layer");
+		const black_layer_2 = this.add.image(547, 962, "black-layer");
+		black_layer_2.scaleX = 1.1;
+		black_layer_2.scaleY = 1.1;
 		container_waitingScene.add(black_layer_2);
 
 		// wait_box
@@ -332,19 +373,101 @@ class Level extends Phaser.Scene {
 		text_wait.setStyle({ "fontSize": "35px" });
 		container_waitingScene.add(text_wait);
 
+		// container_kickOut
+		const container_kickOut = this.add.container(595.6658363492907, 818.1209377575311);
+		container_kickOut.scaleX = 0;
+		container_kickOut.scaleY = 0;
+
+		// black_layer_3
+		const black_layer_3 = this.add.image(-1.6658363492906574, 45.879062242468876, "black-layer");
+		black_layer_3.scaleX = 1.1;
+		black_layer_3.scaleY = 1.1;
+		container_kickOut.add(black_layer_3);
+
+		// box_popup
+		const box_popup = this.add.image(4.334163650709343, 21.879062242468876, "wait-box");
+		container_kickOut.add(box_popup);
+
+		// text_kickOut
+		const text_kickOut = this.add.text(10.334163650709343, 7.879062242468876, "", {});
+		text_kickOut.setOrigin(0.5, 0.5);
+		text_kickOut.text = "There are not enough players to start the game.\n";
+		text_kickOut.setStyle({ "align": "center", "baselineX":1.4,"fontSize": "35px", "maxLines":2});
+		text_kickOut.setPadding({"left":5,"top":5,"right":5,"bottom":5});
+		text_kickOut.setLineSpacing(20);
+		text_kickOut.setWordWrapWidth(700);
+		container_kickOut.add(text_kickOut);
+
+		// ok_Btn
+		const ok_Btn = this.add.image(-2, 252, "ok-Btn");
+		ok_Btn.scaleX = 2.5;
+		ok_Btn.scaleY = 2.5;
+		container_kickOut.add(ok_Btn);
+
+		// text_ok
+		const text_ok = this.add.text(-6, 258, "", {});
+		text_ok.setOrigin(0.5, 0.5);
+		text_ok.text = "OK";
+		text_ok.setStyle({ "color": "#671e02", "fontSize": "55px" });
+		container_kickOut.add(text_ok);
+
+		// container_reqSideShow
+		const container_reqSideShow = this.add.container(371.5, -924.06005859375);
+		container_reqSideShow.visible = false;
+
+		// side_showReqTxt
+		const side_showReqTxt = this.add.text(168.5, 1884.06005859375, "", {});
+		side_showReqTxt.setOrigin(0.5, 0.5);
+		side_showReqTxt.setStyle({ "align": "center", "fontFamily": "BIWOLSTBI", "fontSize": "25px" });
+		container_reqSideShow.add(side_showReqTxt);
+
+		// yesBtn_btn
+		const yesBtn_btn = this.add.image(50, 1970, "red-btn");
+		yesBtn_btn.scaleX = 0.5;
+		yesBtn_btn.scaleY = 0.5;
+		container_reqSideShow.add(yesBtn_btn);
+
+		// no_btn
+		const no_btn = this.add.image(277, 1970, "blue-btn");
+		no_btn.scaleX = 0.5;
+		no_btn.scaleY = 0.5;
+		container_reqSideShow.add(no_btn);
+
+		// accept_text
+		const accept_text = this.add.text(50, 1968, "", {});
+		accept_text.setOrigin(0.5, 0.5);
+		accept_text.text = "Accept";
+		accept_text.setStyle({ "fontFamily": "BIWOLSTBI", "fontSize": "35px" });
+		container_reqSideShow.add(accept_text);
+
+		// reject_text
+		const reject_text = this.add.text(275, 1966, "", {});
+		reject_text.setOrigin(0.5, 0.5);
+		reject_text.text = "Reject";
+		reject_text.setStyle({ "fontFamily": "BIWOLSTBI", "fontSize": "35px" });
+		container_reqSideShow.add(reject_text);
+
 		this.container_background = container_background;
 		this.container_playerPot = container_playerPot;
+		this.chip_bg = chip_bg;
+		this.chip = chip;
 		this.txt_pot = txt_pot;
 		this.txt_nBoardPotLimit = txt_nBoardPotLimit;
 		this.nav_btn = nav_btn;
-		this.container_players = container_players;
+		this.lady = lady;
 		this.container_playerHand = container_playerHand;
+		this.container_resultHandCard = container_resultHandCard;
+		this.container_players = container_players;
+		this.container_tempCoin = container_tempCoin;
 		this.container_button = container_button;
+		this.container_fold = container_fold;
 		this.fold_btn = fold_btn;
 		this.fold_txt = fold_txt;
+		this.container_Show = container_Show;
 		this.show_btn = show_btn;
 		this.show_txt = show_txt;
 		this.show_Disable = show_Disable;
+		this.container_raise = container_raise;
 		this.raise_btn = raise_btn;
 		this.raise_txt = raise_txt;
 		this.raise_value = raise_value;
@@ -357,10 +480,13 @@ class Level extends Phaser.Scene {
 		this.call_btn = call_btn;
 		this.call_txt = call_txt;
 		this.call_value = call_value;
+		this.container_sideShow = container_sideShow;
+		this.side_show_btn = side_show_btn;
+		this.side_show_txt = side_show_txt;
+		this.side_show_Disable = side_show_Disable;
 		this.container_see = container_see;
 		this.see_btn = see_btn;
 		this.see_txt = see_txt;
-		this.container_backCards = container_backCards;
 		this.container_menu = container_menu;
 		this.close_btn = close_btn;
 		this.exit_icon = exit_icon;
@@ -374,6 +500,17 @@ class Level extends Phaser.Scene {
 		this.close_btn_result = close_btn_result;
 		this.container_waitingScene = container_waitingScene;
 		this.text_wait = text_wait;
+		this.container_kickOut = container_kickOut;
+		this.black_layer_3 = black_layer_3;
+		this.text_kickOut = text_kickOut;
+		this.ok_Btn = ok_Btn;
+		this.text_ok = text_ok;
+		this.container_reqSideShow = container_reqSideShow;
+		this.side_showReqTxt = side_showReqTxt;
+		this.yesBtn_btn = yesBtn_btn;
+		this.no_btn = no_btn;
+		this.accept_text = accept_text;
+		this.reject_text = reject_text;
 
 		this.events.emit("scene-awake");
 	}
@@ -382,28 +519,44 @@ class Level extends Phaser.Scene {
 	container_background;
 	/** @type {Phaser.GameObjects.Container} */
 	container_playerPot;
+	/** @type {Phaser.GameObjects.Image} */
+	chip_bg;
+	/** @type {Phaser.GameObjects.Image} */
+	chip;
 	/** @type {Phaser.GameObjects.Text} */
 	txt_pot;
 	/** @type {Phaser.GameObjects.Text} */
 	txt_nBoardPotLimit;
 	/** @type {Phaser.GameObjects.Image} */
 	nav_btn;
-	/** @type {Phaser.GameObjects.Container} */
-	container_players;
+	/** @type {Phaser.GameObjects.Image} */
+	lady;
 	/** @type {Phaser.GameObjects.Container} */
 	container_playerHand;
 	/** @type {Phaser.GameObjects.Container} */
+	container_resultHandCard;
+	/** @type {Phaser.GameObjects.Container} */
+	container_players;
+	/** @type {Phaser.GameObjects.Container} */
+	container_tempCoin;
+	/** @type {Phaser.GameObjects.Container} */
 	container_button;
+	/** @type {Phaser.GameObjects.Container} */
+	container_fold;
 	/** @type {Phaser.GameObjects.Image} */
 	fold_btn;
 	/** @type {Phaser.GameObjects.Text} */
 	fold_txt;
+	/** @type {Phaser.GameObjects.Container} */
+	container_Show;
 	/** @type {Phaser.GameObjects.Image} */
 	show_btn;
 	/** @type {Phaser.GameObjects.Text} */
 	show_txt;
 	/** @type {Phaser.GameObjects.Image} */
 	show_Disable;
+	/** @type {Phaser.GameObjects.Container} */
+	container_raise;
 	/** @type {Phaser.GameObjects.Image} */
 	raise_btn;
 	/** @type {Phaser.GameObjects.Text} */
@@ -429,13 +582,19 @@ class Level extends Phaser.Scene {
 	/** @type {Phaser.GameObjects.Text} */
 	call_value;
 	/** @type {Phaser.GameObjects.Container} */
+	container_sideShow;
+	/** @type {Phaser.GameObjects.Image} */
+	side_show_btn;
+	/** @type {Phaser.GameObjects.Text} */
+	side_show_txt;
+	/** @type {Phaser.GameObjects.Image} */
+	side_show_Disable;
+	/** @type {Phaser.GameObjects.Container} */
 	container_see;
 	/** @type {Phaser.GameObjects.Image} */
 	see_btn;
 	/** @type {Phaser.GameObjects.Text} */
 	see_txt;
-	/** @type {Phaser.GameObjects.Container} */
-	container_backCards;
 	/** @type {Phaser.GameObjects.Container} */
 	container_menu;
 	/** @type {Phaser.GameObjects.Image} */
@@ -462,6 +621,28 @@ class Level extends Phaser.Scene {
 	container_waitingScene;
 	/** @type {Phaser.GameObjects.Text} */
 	text_wait;
+	/** @type {Phaser.GameObjects.Container} */
+	container_kickOut;
+	/** @type {Phaser.GameObjects.Image} */
+	black_layer_3;
+	/** @type {Phaser.GameObjects.Text} */
+	text_kickOut;
+	/** @type {Phaser.GameObjects.Image} */
+	ok_Btn;
+	/** @type {Phaser.GameObjects.Text} */
+	text_ok;
+	/** @type {Phaser.GameObjects.Container} */
+	container_reqSideShow;
+	/** @type {Phaser.GameObjects.Text} */
+	side_showReqTxt;
+	/** @type {Phaser.GameObjects.Image} */
+	yesBtn_btn;
+	/** @type {Phaser.GameObjects.Image} */
+	no_btn;
+	/** @type {Phaser.GameObjects.Text} */
+	accept_text;
+	/** @type {Phaser.GameObjects.Text} */
+	reject_text;
 
 	/* START-USER-CODE */
 
@@ -488,14 +669,12 @@ class Level extends Phaser.Scene {
 		const nChips = urlParams.get("nChips");
 		this.oSocketManager = new SocketManager(this, iBoardId, sAuthToken, sRootUrl, nChips);
 	}
-	resetTableData = () => {
-		this.container_playerHand.removeAll(true);
-		this.oPlayerManager.ownPlayerTurnReset.intervalTimeReset();
-	}
+
 	setBoardPotValue = ({ nBoardPotValue }) => this.txt_pot.text = this.oGameManager.formatSliderValue(nBoardPotValue);
 	setButtonStatus = ({ iUserId }) => {
 		if (iUserId == this.oPlayerManager.player1.name) {
 			if (!this.oGameManager.isBlind) {
+				this.oPlayerManager.player1.back_cardContainer.visible = false;
 				this.container_call.visible = true;
 				this.container_blind.visible = false;
 				this.call_value.text = this.oGameManager.currnentBootValue * 2;
@@ -504,28 +683,29 @@ class Level extends Phaser.Scene {
 			} else {
 				this.container_call.visible = false;
 				this.container_blind.visible = true;
-				console.log("blind");
 				this.blind_value.text = this.oGameManager.currnentBootValue * 2;
 				this.raise2X = this.oGameManager.currnentBootValue * 2
 				this.raise_value.text = this.raise2X * 2;
 			}
 		}
 	}
-	changePlayerValue = ({ iUserId, nCurrentBootValue }) => {
+	changePlayerValue = ({ iUserId, nCurrentBootValue , bEnableSideShowButton }) => {
 		if (iUserId == this.oPlayerManager.player1.name) {
+			bEnableSideShowButton ? this.side_show_Disable.visible = false : this.side_show_Disable.visible = true;
 			this.oGameManager.currnentBootValue = nCurrentBootValue;
 			if (this.oGameManager.isBlind) {
-				this.show_Disable.visible = false;
-				this.show_Disable.setInteractive();
 				this.blind_value.text = this.oGameManager.currnentBootValue;
 				this.raise_value.text = this.oGameManager.currnentBootValue * 2;
 			} else {
-				this.show_Disable.visible = true;
-				this.show_Disable.disableInteractive();
 				this.call_value.text = this.oGameManager.currnentBootValue;
 				this.raise_value.text = this.oGameManager.currnentBootValue * 2;
 			}
 		}
+		if(this.oPlayerManager.players.size > 2){
+			this.show_Disable.visible = true;
+		   }else{
+			this.show_Disable.visible = false;
+		   }
 	}
 	showResultScreen(data) {
 		this.container_resultScreen.visible = true;

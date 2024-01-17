@@ -44,6 +44,7 @@ class resultData extends Phaser.GameObjects.Container {
 		this.text_rank = text_rank;
 
 		/* START-USER-CTR-CODE */
+		this.scene = scene;
 		// Write your code here.
 		/* END-USER-CTR-CODE */
 	}
@@ -60,7 +61,7 @@ class resultData extends Phaser.GameObjects.Container {
 	// Write your code here.
 	setWinnerData(oData){
 		this.text_PlayerName.text = oData.sUserName;
-		this.text_chipesValue.text = oData.nWinningAmount;
+		this.text_chipesValue.text = this.scene.oGameManager.formatSliderValue(oData.nWinningAmount);
 		this.text_rank.text = oData.nRank;
 	}
 

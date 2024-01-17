@@ -59,7 +59,6 @@ class SocketManager {
         };
     }
 
-
     onReceivedData(data) {
         switch (data.sEventName) {
             case undefined:
@@ -86,9 +85,13 @@ class SocketManager {
                 break;
             case "resHand":
                 console.log("resHand", data);
-                this.oScene.oTweenManager.cardDistributeAnimation();
-                this.oScene.container_see.visible = true;
-                this.oScene.oCardManager.setHandCardData(data.oData);
+                this.oScene.oTweenManager.betTweenAnimation1();
+                setTimeout(() => {
+                    this.oScene.oTweenManager.cardDistributeAnimation();
+                    this.oScene.container_see.visible = true;
+                    this.oScene.container_button.visible = true;
+                    this.oScene.oCardManager.setHandCardData(data.oData);
+                }, 2000);
                 // this.oScene.oCardManager.setOpponentCards();
                 break;
             case "resGameState":
@@ -99,11 +102,16 @@ class SocketManager {
                 console.log("resPlayerTurn :", data.oData);
                 this.oScene.oPlayerManager.changePlayerTurn(data.oData);
                 this.oScene.changePlayerValue(data.oData);
+                if(this.oScene.container_reqSideShow.visible){
+                    this.oScene.container_reqSideShow.visible = false;
+                }
                 break;
             case "resBoardState":
                 console.log('%c resBoardState', 'color: #CE375C', data.oData);
                 this.oScene.container_waitingScene.visible = false;
-                this.oScene.oGameManager.setTableData(data.oData)
+                this.oScene.container_playerPot.visible = true;
+                this.oScene.oGameManager.setTableData(data.oData);
+                this.oScene.oPlayerManager.setPlayerData(data.oData.aParticipant);
                 break;
             case "resPlayersState":
                 console.log('%c resPlayersState', 'color: #CE375C', data.oData);
@@ -119,11 +127,12 @@ class SocketManager {
                 break;
             case "resPlayerLeft":
                 console.log('%c resPlayerLeft', 'color: #E3B34C', data.oData);
+                this.oScene.oPlayerManager.setPlayerLeft(data.oData);
                 break;
             case "resResult":
                 console.log('%c resResult', 'color: #5BB381', data.oData);
+                this.oScene.oCardManager.resultHandCard(data.oData);
                 this.oScene.oPlayerManager.resResult(data.oData);
-                this.oScene.showResultScreen(data.oData)
                 break;
             case "resPack":
                 console.log(' %c resPack', 'color: #5BB381', data.oData);
@@ -132,14 +141,22 @@ class SocketManager {
                 console.log(" %c resPlaceBet", 'color: #5BB381', data.oData);
                 this.oScene.setBoardPotValue(data.oData);
                 this.oScene.oPlayerManager.setOpponentPlayerCall(data.oData);
-                // this.oScene.container_button.visible = false;
+                this.oScene.oPlayerManager.placeBetAnimation(data.oData);
                 break;
             case "resShowHand":
                 console.log("resShowHand", data.oData);
                 break;
             case "resetTable":
-                this.oScene.resetTableData();
+                console.log("resetTable", data.oData);
+                this.oScene.oGameManager.resetTableData();
                 break;
+            case "resKickOut":
+                this.oScene.oTweenManager.menuAnimation(0, 1 , this.oScene.container_kickOut);
+                break;  
+            case "resSideShow":
+                console.log("resSideShow", data.oData);
+                this.oScene.oPlayerManager.setSideShowOption(data.oData);
+                break;      
             default:
                 console.log('%c New Event !!!!!! ', 'color: #E3B34C', data.sEventName, data);
                 break;

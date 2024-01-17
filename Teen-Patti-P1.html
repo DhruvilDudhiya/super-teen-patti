@@ -11,7 +11,7 @@
    <script src="./teen_patti_files/jquery.min.js"></script>
    <script src="./teen_patti_files/bootstrap.min.js"></script>
    <script src="./teen_patti_files/socket.io.js"></script>
-   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+   <!-- <link rel="icon" type="image/x-icon" href="assets/favicon.ico"> -->
 
 </head>
 
@@ -27,7 +27,7 @@
          <div class="login-form-group row" id="login-group">
             <div class="col-md-4 col-sm-6 col-12">
                <div class="email-input">
-                  <input type="email" id="sEmail" value="c@yudiz.in" placeholder="Enter Email" />
+                  <input type="email" id="sEmail" value="dhruvil@yudiz.in" placeholder="Enter Email" />
                </div>
                <div class="password-input">
                   <input type="password" id="sPassword" value="Asdf@1234" placeholder="Enter Password" />
@@ -52,10 +52,10 @@
 
    <script>
       //Change the Game Port According to your Game Port Number
-      let gamePort = 3737;
+      let gamePort = 4181;
       const sRoot = "https://teenpatti-backend.lc.webdevprojects.cloud";
-      // const sRootl = "https://ad8c-103-156-142-125.ngrok.io";
-
+      // const sRoot = "http://192.168.11.56:3003";
+      // const sRoot = "http://192.168.11.123:3003";
       const sRootUrl = sRoot + "/api/v1";
       let sAuthorization = "";
       let iProtoId = "";
@@ -93,11 +93,10 @@
                authorization: sAuthorization,
             },
          };
-
          $.ajax(settings).done(function (response) {
             $("#gameData").removeAttr("style");
             $("#joinTable").removeAttr("style");
-            console.log('response', response);
+            console.log('response', response );
 
             $('#TwoPlayer').attr('value',response.data[2][0].iProtoId);
             $('#ThreePlayer').attr('value',response.data[3][0].iProtoId);
@@ -123,8 +122,9 @@
          console.log(btnId,$(`#${btnId}`),$(`#${btnId}`).val());
 
          $.ajax(settings).done(function (response) {
-            const gameUrl = "http://127.0.0.1:" + gamePort + "/editor/external/?";
-            // const gameUrl = "https://demos.yudiz.com/html5/super-teen-patti/?";
+            // const gameUrl = "http://127.0.0.1:" + gamePort + "/editor/external/?";
+            // const gameUrl = "http://192.168.11.84:5503/?";
+            const gameUrl = "https://demos.yudiz.com/html5/super-teen-patti/?";
             var passString = "iBoardId=" + response.data.iBoardId + "&";
             passString = passString + "sAuthToken=" + sAuthorization + "&";
             passString = passString + "sRootUrl=" + sRoot + "&";

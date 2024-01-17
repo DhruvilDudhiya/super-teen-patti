@@ -14,8 +14,7 @@
             "id": "a350c94c-2b58-4ad5-a8d5-e8c9b1fbf3aa",
             "label": "container_1",
             "components": [],
-            "x": -10,
-            "y": -15,
+            "y": 5,
             "list": [
                 {
                     "type": "Image",
@@ -26,8 +25,7 @@
                     "texture": {
                         "key": "frontCard"
                     },
-                    "x": 13,
-                    "y": 17,
+                    "y": -77,
                     "scaleX": 0.3,
                     "scaleY": 0.3
                 },
@@ -40,8 +38,7 @@
                     "texture": {
                         "key": "Diamond"
                     },
-                    "x": 11,
-                    "y": 16,
+                    "y": -77,
                     "scaleX": 0.2,
                     "scaleY": 0.2
                 },
@@ -51,8 +48,8 @@
                     "label": "cardNumber",
                     "scope": "CLASS",
                     "components": [],
-                    "x": -29,
-                    "y": -51,
+                    "x": -44,
+                    "y": -147,
                     "scaleX": 0.7,
                     "scaleY": 0.7,
                     "text": "1",
@@ -68,8 +65,8 @@
                     "texture": {
                         "key": "Diamond"
                     },
-                    "x": -17,
-                    "y": -10,
+                    "x": -26,
+                    "y": -109,
                     "scaleX": 0.1,
                     "scaleY": 0.1
                 }

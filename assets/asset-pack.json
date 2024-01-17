@@ -152,6 +152,11 @@
                 "key": "InputManager"
             },
             {
+                "url": "assets/images/gamePlay/lady.png",
+                "type": "image",
+                "key": "lady"
+            },
+            {
                 "url": "assets/images/resultscreen/medal-1.png",
                 "type": "image",
                 "key": "medal-1"
@@ -180,6 +185,11 @@
                 "url": "assets/images/off-btn.png",
                 "type": "image",
                 "key": "off-btn"
+            },
+            {
+                "url": "assets/images/ok-Btn.png",
+                "type": "image",
+                "key": "ok-Btn"
             },
             {
                 "url": "assets/images/on-btn.png",
@@ -220,6 +230,11 @@
                 "url": "src/Prefabs/resultData.js",
                 "type": "script",
                 "key": "resultData"
+            },
+            {
+                "url": "assets/images/rounded_Glow.png",
+                "type": "image",
+                "key": "rounded_Glow"
             },
             {
                 "url": "assets/images/see-btn.png",
@@ -285,6 +300,16 @@
                 "url": "assets/images/wait-box.png",
                 "type": "image",
                 "key": "wait-box"
+            },
+            {
+                "url": "assets/images/winner_tag.png",
+                "type": "image",
+                "key": "winner_tag"
+            },
+            {
+                "url": "assets/images/yellow_star.png",
+                "type": "image",
+                "key": "yellow_star"
             }
         ]
     },

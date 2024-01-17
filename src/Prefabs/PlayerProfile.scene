@@ -135,6 +135,155 @@
                     "fontFamily": "BIWOLSTBI",
                     "fontSize": "25px",
                     "fontStyle": "bold"
+                },
+                {
+                    "type": "Container",
+                    "id": "98ed9d4e-b304-4a0d-a10f-151167b55ec2",
+                    "label": "back-cardContainer",
+                    "scope": "CLASS",
+                    "components": [],
+                    "x": 170,
+                    "scaleX": 0.8,
+                    "scaleY": 0.8,
+                    "list": [
+                        {
+                            "type": "Image",
+                            "id": "7291cc25-93fc-497e-a288-119227bed3de",
+                            "label": "card_back_2",
+                            "useGameObjectName": true,
+                            "scope": "CLASS",
+                            "components": [],
+                            "texture": {
+                                "key": "card-back"
+                            },
+                            "x": -38,
+                            "y": 1,
+                            "scaleX": 1.1,
+                            "scaleY": 1.1,
+                            "angle": -10,
+                            "visible": false
+                        },
+                        {
+                            "type": "Image",
+                            "id": "3dfd310f-c6fe-46b8-89fb-21e7aec4a1aa",
+                            "label": "card_back_1",
+                            "useGameObjectName": true,
+                            "scope": "CLASS",
+                            "components": [],
+                            "texture": {
+                                "key": "card-back"
+                            },
+                            "x": 1,
+                            "y": -2,
+                            "scaleX": 1.1,
+                            "scaleY": 1.1,
+                            "visible": false
+                        },
+                        {
+                            "type": "Image",
+                            "id": "609a445f-bcc7-4962-bdc3-9d320dc6778d",
+                            "label": "card_back",
+                            "useGameObjectName": true,
+                            "scope": "CLASS",
+                            "components": [],
+                            "texture": {
+                                "key": "card-back"
+                            },
+                            "x": 38,
+                            "y": 1,
+                            "scaleX": 1.1,
+                            "scaleY": 1.1,
+                            "angle": 10,
+                            "visible": false
+                        }
+                    ]
+                },
+                {
+                    "type": "Container",
+                    "id": "b1f4b80b-680d-4867-8a16-14f4c446b6d9",
+                    "label": "container_winnerUi",
+                    "scope": "CLASS",
+                    "components": [],
+                    "x": -5,
+                    "y": -101,
+                    "visible": false,
+                    "list": [
+                        {
+                            "type": "Image",
+                            "id": "5dc9655f-fd8d-4f2f-bada-24dad3ad06cc",
+                            "label": "rounded_Glow",
+                            "scope": "CLASS",
+                            "components": [],
+                            "texture": {
+                                "key": "rounded_Glow"
+                            },
+                            "y": 96,
+                            "scaleX": 0.65,
+                            "scaleY": 0.65
+                        },
+                        {
+                            "type": "Image",
+                            "id": "01a9f79d-a26d-4a81-94d2-9932384a7521",
+                            "label": "winner_tag",
+                            "components": [],
+                            "texture": {
+                                "key": "winner_tag"
+                            },
+                            "x": -2,
+                            "y": 15,
+                            "scaleX": 0.7,
+                            "scaleY": 0.7
+                        }
+                    ]
+                },
+                {
+                    "type": "Container",
+                    "id": "46ecee46-d421-45b9-a19b-ee554dc92f7a",
+                    "label": "container_reqSideShow",
+                    "scope": "CLASS",
+                    "components": [],
+                    "x": -45,
+                    "y": 158,
+                    "visible": false,
+                    "list": [
+                        {
+                            "type": "Text",
+                            "id": "1df6e380-7503-4b2d-9e6a-98eecd084121",
+                            "label": "side_showReqTxt",
+                            "scope": "CLASS",
+                            "components": [],
+                            "x": 58,
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "player1 want to send req"
+                        },
+                        {
+                            "type": "Image",
+                            "id": "6bf8eefe-116f-45b6-a2ab-3f55b6dbbaf8",
+                            "label": "yesBtn_btn",
+                            "components": [],
+                            "texture": {
+                                "key": "red-btn"
+                            },
+                            "y": 39,
+                            "scaleX": 0.3,
+                            "scaleY": 0.3
+                        },
+                        {
+                            "type": "Image",
+                            "id": "13aabf95-3097-47fd-b20e-6d12003a48a0",
+                            "label": "no_btn",
+                            "scope": "CLASS",
+                            "components": [],
+                            "texture": {
+                                "key": "blue-btn"
+                            },
+                            "x": 96,
+                            "y": 40,
+                            "scaleX": 0.3,
+                            "scaleY": 0.3
+                        }
+                    ]
                 }
             ]
         }

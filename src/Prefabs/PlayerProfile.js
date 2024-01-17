@@ -66,6 +66,78 @@ class PlayerProfile extends Phaser.GameObjects.Container {
 		card_status.setStyle({ "fontFamily": "BIWOLSTBI", "fontSize": "25px", "fontStyle": "bold" });
 		this.add(card_status);
 
+		// back-cardContainer
+		const back_cardContainer = scene.add.container(170, 0);
+		back_cardContainer.scaleX = 0.8;
+		back_cardContainer.scaleY = 0.8;
+		this.add(back_cardContainer);
+
+		// card_back_2
+		const card_back_2 = scene.add.image(-38, 1, "card-back");
+		card_back_2.name = "card_back_2";
+		card_back_2.scaleX = 1.1;
+		card_back_2.scaleY = 1.1;
+		card_back_2.angle = -10;
+		card_back_2.visible = false;
+		back_cardContainer.add(card_back_2);
+
+		// card_back_1
+		const card_back_1 = scene.add.image(1, -2, "card-back");
+		card_back_1.name = "card_back_1";
+		card_back_1.scaleX = 1.1;
+		card_back_1.scaleY = 1.1;
+		card_back_1.visible = false;
+		back_cardContainer.add(card_back_1);
+
+		// card_back
+		const card_back = scene.add.image(38, 1, "card-back");
+		card_back.name = "card_back";
+		card_back.scaleX = 1.1;
+		card_back.scaleY = 1.1;
+		card_back.angle = 10;
+		card_back.visible = false;
+		back_cardContainer.add(card_back);
+
+		// container_winnerUi
+		const container_winnerUi = scene.add.container(-5, -101);
+		container_winnerUi.visible = false;
+		this.add(container_winnerUi);
+
+		// rounded_Glow
+		const rounded_Glow = scene.add.image(0, 96, "rounded_Glow");
+		rounded_Glow.scaleX = 0.65;
+		rounded_Glow.scaleY = 0.65;
+		container_winnerUi.add(rounded_Glow);
+
+		// winner_tag
+		const winner_tag = scene.add.image(-2, 15, "winner_tag");
+		winner_tag.scaleX = 0.7;
+		winner_tag.scaleY = 0.7;
+		container_winnerUi.add(winner_tag);
+
+		// container_reqSideShow
+		const container_reqSideShow = scene.add.container(-45, 158);
+		container_reqSideShow.visible = false;
+		this.add(container_reqSideShow);
+
+		// side_showReqTxt
+		const side_showReqTxt = scene.add.text(58, 0, "", {});
+		side_showReqTxt.setOrigin(0.5, 0.5);
+		side_showReqTxt.text = "player1 want to send req";
+		container_reqSideShow.add(side_showReqTxt);
+
+		// yesBtn_btn
+		const yesBtn_btn = scene.add.image(0, 39, "red-btn");
+		yesBtn_btn.scaleX = 0.3;
+		yesBtn_btn.scaleY = 0.3;
+		container_reqSideShow.add(yesBtn_btn);
+
+		// no_btn
+		const no_btn = scene.add.image(96, 40, "blue-btn");
+		no_btn.scaleX = 0.3;
+		no_btn.scaleY = 0.3;
+		container_reqSideShow.add(no_btn);
+
 		this.container_PlayerProfile = container_PlayerProfile;
 		this.profilepic = profilepic;
 		this.blind_bg = blind_bg;
@@ -73,6 +145,15 @@ class PlayerProfile extends Phaser.GameObjects.Container {
 		this.text_playerName = text_playerName;
 		this.text_playerChipes = text_playerChipes;
 		this.card_status = card_status;
+		this.back_cardContainer = back_cardContainer;
+		this.card_back_2 = card_back_2;
+		this.card_back_1 = card_back_1;
+		this.card_back = card_back;
+		this.container_winnerUi = container_winnerUi;
+		this.rounded_Glow = rounded_Glow;
+		this.container_reqSideShow = container_reqSideShow;
+		this.side_showReqTxt = side_showReqTxt;
+		this.no_btn = no_btn;
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.
@@ -102,6 +183,24 @@ class PlayerProfile extends Phaser.GameObjects.Container {
 	text_playerChipes;
 	/** @type {Phaser.GameObjects.Text} */
 	card_status;
+	/** @type {Phaser.GameObjects.Container} */
+	back_cardContainer;
+	/** @type {Phaser.GameObjects.Image} */
+	card_back_2;
+	/** @type {Phaser.GameObjects.Image} */
+	card_back_1;
+	/** @type {Phaser.GameObjects.Image} */
+	card_back;
+	/** @type {Phaser.GameObjects.Container} */
+	container_winnerUi;
+	/** @type {Phaser.GameObjects.Image} */
+	rounded_Glow;
+	/** @type {Phaser.GameObjects.Container} */
+	container_reqSideShow;
+	/** @type {Phaser.GameObjects.Text} */
+	side_showReqTxt;
+	/** @type {Phaser.GameObjects.Image} */
+	no_btn;
 
 	/* START-USER-CODE */
 
